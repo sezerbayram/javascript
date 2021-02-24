@@ -3,24 +3,51 @@
 
 function hesapmakinesi(sayi1, sayi2, islemisareti){
 
-    if ( islemisareti == '+') console.log(sayi1+sayi2);
+    if ( islemisareti == '+'){
+        let sonuc = {
+          islemsonucu:  sayi1+sayi2,
+          durum: 'toplama'
+
+                 }
+           return sonuc;
+        } 
     
-    else if ( islemisareti == '-') console.log(sayi1-sayi2);
+    else if ( islemisareti == '-'){
+        let sonuc = {
+          islemsonucu:  sayi1-sayi2,
+          durum: 'cikarma'
+
+                 }
+            return sonuc;
+        }
     
-    else if ( islemisareti == '*') console.log(sayi1*sayi2);
+    else if ( islemisareti == '*'){
+        let sonuc = {
+          islemsonucu:  sayi1*sayi2,
+          durum: 'carpma'
+
+                 }
+             return sonuc;
+        }
     
     else if ( islemisareti == '/'){
    
              if(sayi2==0) console.log('ikinci sayi sifira esit.Bu yuzden sonuc belirsizdir');
-            else console.log(sayi1/sayi2);
-    
-    
+             else {
+                let sonuc = {
+                  islemsonucu:  sayi1/sayi2,
+                  durum: 'bolme'
+        
+                         }
+             return sonuc;
         }
+      }
 
     else console.log('boyle bir islem bulunamadi!!');
 
 }
 
-hesapmakinesi(12,3,'/');
+  const islemm = hesapmakinesi(5,6,'+');
+  console.log(islemm);
 
 //gelistirilecektir!!
