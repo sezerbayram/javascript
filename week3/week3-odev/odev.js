@@ -1,30 +1,32 @@
 
 //islem isaretini lutfen string deger olarak girelim!!
 
-function hesapmakinesi(sayi1, sayi2, islemisareti){
-
-    if ( islemisareti == '+'){
+function hesapMakinesi(sayi1, sayi2, islemIsareti){
+    
+if( isNaN(sayi1) || isNaN(sayi2 ))console.log('string deger girdiniz lutfen number giriniz!!');
+else{
+    if ( islemIsareti == '+'){
         let sonuc = {
-          islemsonucu:  sayi1+sayi2,
-          durum: 'toplama'
+          islemSonucu:  sayi1+sayi2,
+          secim: 'toplama'
 
                  }
            return sonuc;
         } 
     
-    else if ( islemisareti == '-'){
+    else if ( islemIsareti == '-'){
         let sonuc = {
-          islemsonucu:  sayi1-sayi2,
-          durum: 'cikarma'
+          islemSonucu:  sayi1-sayi2,
+          secim: 'cikarma'
 
                  }
             return sonuc;
         }
     
-    else if ( islemisareti == '*'){
+    else if ( islemIsareti == '*'){
         let sonuc = {
-          islemsonucu:  sayi1*sayi2,
-          durum: 'carpma'
+          islemSonucu:  sayi1*sayi2,
+          secim: 'carpma'
 
                  }
              return sonuc;
@@ -36,7 +38,7 @@ function hesapmakinesi(sayi1, sayi2, islemisareti){
              else {
                 let sonuc = {
                   islemsonucu:  sayi1/sayi2,
-                  durum: 'bolme'
+                  secim: 'bolme'
         
                          }
              return sonuc;
@@ -44,10 +46,11 @@ function hesapmakinesi(sayi1, sayi2, islemisareti){
       }
 
     else console.log('boyle bir islem bulunamadi!!');
+}
 
 }
 
-  const islemm = hesapmakinesi(5,6,'+');
+  const islemm = hesapMakinesi(74,  4,'+');
   console.log(islemm);
 
 //gelistirilecektir!!
